@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="shadow" style="display: none"></div>
+      <div class="blur" style="display: none"></div>
+      <div class="title">
+        <span>예약 목록</span>
+      </div>
+      <div class="content">
+        <div class="reserveWrap">
+          <div class="reserveDiv"></div>
+        </div>
+        <div class="detailWrap">
+          <div class="detailDiv">
+            <button class="detailCloseBtn">닫기</button>
+            <span>예약 정보</span>
+            <div>
+              <span>예약 상태</span>
+              <span class="detailSpan" id="status"></span>
+            </div>
+            <div>
+              <span>예약 시간</span>
+              <span class="detailSpan" id="timeReserved"></span>
+            </div>
+            <div>
+              <span>접수 시간</span>
+              <span class="detailSpan" id="timeRegistered"></span>
+            </div>
+            <span>고객 정보</span>
+            <div>
+              <span>고객 성명</span>
+              <span class="detailSpan" id="customer.name"></span>
+            </div>
+            <div>
+              <span>고객 등급</span>
+              <span class="detailSpan" id="customer.level"></span>
+            </div>
+            <div class="truncate">
+              <span>고객 메모</span>
+              <span class="detailSpan" id="customer.memo"></span>
+            </div>
+            <div class="truncate">
+              <span>요청사항</span>
+              <span class="detailSpan" id="customer.request"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

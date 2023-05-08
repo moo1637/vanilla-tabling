@@ -1,0 +1,211 @@
+body {
+  background-color: #ced8e4;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28vh;
+  font-size: 3.4rem;
+  font-weight: 500;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+  font-size: 0.9rem;
+  padding-bottom: 10px;
+}
+.reserveWrap {
+  display: flex;
+  flex-direction: row;
+  width: -webkit-calc(100% - 400px);
+  width: -moz-calc(100% - 400px);
+  width: calc(100% - 400px);
+}
+.reserveDiv {
+  padding: 0 8px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.reserveBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  height: 90px;
+  margin-bottom: 13px;
+  cursor: pointer;
+}
+.statusDiv {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statusDiv span {
+  padding: 5px 0;
+}
+
+.statusDiv .status.reserved {
+  color: #3bb94c;
+}
+.statusDiv .status.seated {
+  color: #162149;
+}
+
+.customerDiv {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.customerDiv span {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}
+.buttonDiv button {
+  background-color: #162149;
+  border-radius: 5px;
+  color: #ffffff;
+  width: 80px;
+  height: 36px;
+  cursor: pointer;
+}
+.detailWrap {
+  width: 400px;
+  height: 100%;
+  padding: 0 8px;
+}
+.detailDiv {
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  line-height: 30px;
+}
+.detailDiv > span {
+  font-size: 1.1rem;
+  padding: 1rem 0;
+}
+.detailCloseBtn {
+  display: none;
+}
+.detailDiv div {
+  width: 100%;
+}
+.detailDiv div :nth-child(1) {
+  font-size: 1rem;
+  color: gray;
+  width: 20%;
+  padding-right: 20px;
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1023px) {
+  .title {
+    font-size: 2.4rem;
+    height: 19vh;
+  }
+  .content {
+    height: 80vh;
+  }
+  .reserveWrap {
+    width: 100%;
+    padding: 0;
+  }
+  .detailWrap {
+    display: none;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    left: 0;
+    top: 10%;
+  }
+  .detailOpen {
+    display: block;
+    animation: slide-up-fade-in 1s forwards;
+  }
+  .detailClose {
+    animation: slide-down-fade-out 1s forwards;
+  }
+  .detailCloseBtn {
+    display: block;
+    position: absolute;
+    font-size: 1rem;
+    right: 1rem;
+    margin-top: 1rem;
+    border: none;
+    background: none;
+  }
+  .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+  }
+
+  @keyframes slide-up-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slide-down-fade-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+}
